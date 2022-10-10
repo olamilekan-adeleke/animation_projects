@@ -63,10 +63,10 @@ class DemoPainter extends CustomPainter {
     final Offset center = Offset(size.width / 2, size.height / 2);
     final Paint paint = Paint()
       ..color = rectColor
-      ..style = PaintingStyle.stroke
+      ..style = PaintingStyle.fill
       ..strokeWidth = 5;
 
-    final Path triangle = Path();
+    // final Path triangle = Path();
 
     // triangle.moveTo(0, 150);
     // triangle.relativeLineTo(100, 100);
@@ -92,7 +92,23 @@ class DemoPainter extends CustomPainter {
 
     // canvas.drawPath(polygon, paint);
 
-    final Path cross = Path();
+    // final Path cross = Path();
+
+    // cross.moveTo(100, 0);
+    // cross.relativeLineTo(50, 0);
+    // cross.relativeLineTo(0, 50);
+    // cross.relativeLineTo(50, 0);
+    // cross.relativeLineTo(0, 50);
+    // cross.relativeLineTo(-50, 0);
+    // cross.relativeLineTo(0, 50);
+    // cross.relativeLineTo(-50, 0);
+    // cross.relativeLineTo(0, -50);
+    // cross.relativeLineTo(-50, 0);
+    // cross.relativeLineTo(0, -50);
+    // cross.relativeLineTo(50, 0);
+    // cross.close();
+
+    // canvas.drawPath(cross, paint);
   }
 
   @override
