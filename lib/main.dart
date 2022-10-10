@@ -64,7 +64,8 @@ class DemoPainter extends CustomPainter {
     final Paint paint = Paint()
       ..color = rectColor
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 5;
+      ..strokeJoin = StrokeJoin.round
+      ..strokeWidth = 2;
 
     // final Path triangle = Path();
 
@@ -116,6 +117,20 @@ class DemoPainter extends CustomPainter {
     //   canvas.drawCircle(center, radius, paint);
     //   radius -= 10;
     // }
+
+    final Path batteryPath = Path();
+
+    batteryPath.moveTo(50, 0);
+    batteryPath.relativeLineTo(100, 0);
+    batteryPath.relativeLineTo(0, 20);
+    batteryPath.relativeLineTo(8, 0);
+    batteryPath.relativeLineTo(0, 10);
+    batteryPath.relativeLineTo(-8, 0);
+    batteryPath.relativeLineTo(0, 20);
+    batteryPath.relativeLineTo(-100, 0);
+    batteryPath.close();
+
+    canvas.drawPath(batteryPath, paint);
   }
 
   @override
