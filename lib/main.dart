@@ -63,7 +63,7 @@ class DemoPainter extends CustomPainter {
     final Offset center = Offset(size.width / 2, size.height / 2);
     final Paint paint = Paint()
       ..color = rectColor
-      ..style = PaintingStyle.fill
+      ..style = PaintingStyle.stroke
       ..strokeWidth = 5;
 
     // final Path triangle = Path();
@@ -109,6 +109,13 @@ class DemoPainter extends CustomPainter {
     // cross.close();
 
     // canvas.drawPath(cross, paint);
+
+    // double radius = 100;
+    // const Offset center2 = Offset(200, 500);
+    // while (radius > 0) {
+    //   canvas.drawCircle(center, radius, paint);
+    //   radius -= 10;
+    // }
   }
 
   @override
