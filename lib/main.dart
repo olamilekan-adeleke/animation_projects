@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: CustomPaint(
           painter: DemoPainter(Colors.teal),
-          child: const SizedBox.square(dimension: 200),
+          child: const SizedBox.square(dimension: 300),
         ),
       ),
     );
@@ -61,27 +61,38 @@ class DemoPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Offset center = Offset(size.width / 2, size.height / 2);
-    // const double radius = 45.0;
-    // final Paint paint = Paint()
-    //   ..style = PaintingStyle.fill
-    //   ..color = rectColor;
+    final Paint paint = Paint()
+      ..color = rectColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 5;
 
-    // canvas.drawCircle(center, radius, paint);
+    final Path triangle = Path();
 
-    // var p1 = const Offset(100.0, 100.0);
-    // var p2 = const Offset(200.0, 200.0);
-    // var paint = Paint()
-    //   ..color = Colors.blue
-    //   ..strokeWidth = 5.0;
+    // triangle.moveTo(0, 150);
+    // triangle.relativeLineTo(100, 100);
+    // triangle.relativeLineTo(-200, 0);
+    // triangle.close();
 
-    // canvas.drawLine(p1, p2, paint);
+    // canvas.drawPath(triangle, paint);
 
-    // final Rect rect = Rect.fromCenter(center: center, width: 300, height: 150);
-    // final Paint paint = Paint()..color = rectColor;
+    // const Path square = Path();
 
-    // canvas.drawArc(rect, 0.0, pi / 2, true, paint);
+    // final Rect square = Rect.fromLTRB(200, 00, 100, 100);
+    // canvas.drawRect(square, paint);
 
-    canvas.drawPaint(Paint()..color = rectColor);
+    // final Path polygon = Path();
+
+    // polygon.moveTo(200, 0);
+    // polygon.relativeLineTo(75, 50);
+    // polygon.relativeLineTo(0, 75);
+    // polygon.relativeLineTo(-75, 50);
+    // polygon.relativeLineTo(-75, -50);
+    // polygon.relativeLineTo(0, -75);
+    // polygon.close();
+
+    // canvas.drawPath(polygon, paint);
+
+    final Path cross = Path();
   }
 
   @override
