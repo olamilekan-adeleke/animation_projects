@@ -40,7 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: CustomPaint(
           painter: DemoPainter(Colors.teal),
-          child: const SizedBox.square(dimension: 300),
+          child: const ColoredBox(
+            color: Colors.transparent,
+            child: SizedBox(
+              height: 500,
+              width: 500,
+            ),
+          ),
         ),
       ),
     );
@@ -63,7 +69,7 @@ class DemoPainter extends CustomPainter {
     final Offset center = Offset(size.width / 2, size.height / 2);
     final Paint paint = Paint()
       ..color = rectColor
-      ..style = PaintingStyle.stroke
+      ..style = PaintingStyle.fill
       ..strokeJoin = StrokeJoin.round
       ..strokeWidth = 2;
 
@@ -118,19 +124,51 @@ class DemoPainter extends CustomPainter {
     //   radius -= 10;
     // }
 
-    final Path batteryPath = Path();
+    // final Path batteryPath = Path();
 
-    batteryPath.moveTo(50, 0);
-    batteryPath.relativeLineTo(100, 0);
-    batteryPath.relativeLineTo(0, 20);
-    batteryPath.relativeLineTo(8, 0);
-    batteryPath.relativeLineTo(0, 10);
-    batteryPath.relativeLineTo(-8, 0);
-    batteryPath.relativeLineTo(0, 20);
-    batteryPath.relativeLineTo(-100, 0);
-    batteryPath.close();
+    // batteryPath.moveTo(50, 0);
+    // batteryPath.relativeLineTo(100, 0);
+    // batteryPath.relativeLineTo(0, 20);
+    // batteryPath.relativeLineTo(8, 0);
+    // batteryPath.relativeLineTo(0, 10);
+    // batteryPath.relativeLineTo(-8, 0);
+    // batteryPath.relativeLineTo(0, 20);
+    // batteryPath.relativeLineTo(-100, 0);
+    // batteryPath.close();
 
-    canvas.drawPath(batteryPath, paint);
+    // canvas.drawPath(batteryPath, paint);
+
+    // final Path flutterIconOnePath = Path();
+    // final Path flutterIconTwoPath = Path();
+
+    // flutterIconOnePath.moveTo(10, size.width / 2);
+    // flutterIconOnePath.relativeLineTo(10, 10);
+    // flutterIconOnePath.relativeLineTo(50, -50);
+    // flutterIconOnePath.relativeLineTo(-20, 0);
+    // flutterIconOnePath.close();
+
+    // flutterIconTwoPath.moveTo(25, (size.width / 2) + 15);
+    // flutterIconTwoPath.relativeLineTo(20, 20);
+    // flutterIconTwoPath.relativeLineTo(18, 0);
+    // flutterIconTwoPath.relativeLineTo(-18, -18);
+    // flutterIconTwoPath.relativeLineTo(22, -22);
+    // flutterIconTwoPath.relativeLineTo(-23, 0);
+    // flutterIconTwoPath.close();
+
+    // canvas.drawPath(flutterIconOnePath, paint);
+    // canvas.drawPath(flutterIconTwoPath, paint);
+
+    // const TextStyle textStyle = TextStyle(color: Colors.black, fontSize: 40);
+    // const TextSpan textSpan = TextSpan(text: 'Flutter', style: textStyle);
+    // final TextPainter textPainter = TextPainter(
+    //   text: textSpan,
+    //   textDirection: TextDirection.ltr,
+    // );
+    // final Offset textOffset = Offset(80, (size.width / 2) - 20);
+
+    // textPainter.layout(minWidth: 0, maxWidth: size.width);
+
+    // textPainter.paint(canvas, textOffset);
   }
 
   @override
